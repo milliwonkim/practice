@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            color: coral;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    </style>
+    <title>현조 블로그</title>
+    <h1>Hyunjo's Blog</h1>
+</head>
+<style>
+    h2 {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+    h3 {
+        text-align: center;
+    }
+</style>
+<body>
+        {% block contents %}
+        <h2>　</h2>
+        <h2>PROFILE</h2>
+        <h2>　</h2>
+        <img src="{% static 'img/profile1.jpg' %}" />
+        {% endblock %}
+    </body>
+<footer>
+    <style>
+        h5 {
+            text-align: center;
+        }
+    </style>
+    <h5><a href="{% url 'home' %}">HOME</a></h5>
+    <h5><a href="{% url 'profile' %}">PROFILE</a></h5>
+</footer>
+</html>
